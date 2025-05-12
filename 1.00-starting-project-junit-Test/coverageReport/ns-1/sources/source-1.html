@@ -1,0 +1,201 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > DemoUtilsTest</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">junitdemp</a>
+</div>
+
+<h1>Coverage Summary for Class: DemoUtilsTest (junitdemp)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">DemoUtilsTest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (14/14)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (31/31)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package junitdemp;
+&nbsp;
+&nbsp;import org.example.junitdemo.DemoUtils;
+&nbsp;import org.junit.jupiter.api.*;
+&nbsp;
+&nbsp;import java.time.Duration;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;import static org.junit.jupiter.api.Assertions.*;
+&nbsp;
+&nbsp;@DisplayNameGeneration(DisplayNameGenerator.Simple.class)
+&nbsp;@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+<b class="fc">&nbsp;class DemoUtilsTest {</b>
+&nbsp;    DemoUtils demoUtils ;
+&nbsp;    @BeforeEach
+&nbsp;    void setupBeforeEach() {
+&nbsp;        //setup
+<b class="fc">&nbsp;         demoUtils = new DemoUtils() ;</b>
+<b class="fc">&nbsp;        System.out.println(&quot;@BeforeEach execution before the execution of each test method&quot;);</b>
+&nbsp;    }
+&nbsp;    @AfterEach
+&nbsp;    void tearDownAfterEach() {
+<b class="fc">&nbsp;        System.out.println(&quot;Running @AfterEach\n&quot;);</b>
+&nbsp;    }
+&nbsp;    @BeforeAll
+&nbsp;    static void setupBeforeEachClass() {
+<b class="fc">&nbsp;        System.out.println(&quot;@BeforeAll executes only once before all test methods execution in the class&quot;);</b>
+&nbsp;    }
+&nbsp;    @AfterAll
+&nbsp;    static void tearDownAfterEachClass() {
+<b class="fc">&nbsp;        System.out.println(&quot;@AfterAll executes only once before all test methods execution in the class&quot;);</b>
+&nbsp;    }
+&nbsp;    @Test
+&nbsp;    @Order(1)
+&nbsp;    void testEqualsAndNotEquals() {
+<b class="fc">&nbsp;        System.out.println(&quot;Running test: testEqualsAndNotEquals&quot;);</b>
+<b class="fc">&nbsp;        assertEquals(6 , demoUtils.add(2,4) , &quot;2+4 must be 6&quot;) ;</b>
+<b class="fc">&nbsp;        assertNotEquals(7, demoUtils.add(2,4) , &quot;2+4 must not be 7&quot;);</b>
+&nbsp;    }
+&nbsp;    @Test
+&nbsp;    @Order(2)
+&nbsp;    void testNullAndNotNull () {
+<b class="fc">&nbsp;        System.out.println(&quot;Running test: testNullAndNotNull&quot;);</b>
+<b class="fc">&nbsp;        String str1 = null ;</b>
+<b class="fc">&nbsp;        String str2 = &quot;ahmed&quot; ;</b>
+<b class="fc">&nbsp;        assertNull(demoUtils.checkNull(str1), &quot;Object should be null &quot;);</b>
+<b class="fc">&nbsp;        assertNotNull(demoUtils.checkNull(str2), &quot;Object should not be null &quot;);</b>
+&nbsp;    }
+&nbsp;    @Test
+&nbsp;    @Order(3)
+&nbsp;    void testSameAndNotSame() {
+<b class="fc">&nbsp;        System.out.println(&quot;Running test: testSameAndNotSame&quot;);</b>
+&nbsp;
+<b class="fc">&nbsp;        String str = &quot;luv2code&quot; ;</b>
+<b class="fc">&nbsp;            assertSame (demoUtils.getAcademy() , demoUtils.getAcademyDuplicate() , &quot;Objects should refer to same object&quot;) ;</b>
+<b class="fc">&nbsp;            assertNotSame(str, demoUtils.getAcademy() , &quot;Objects should not refer to same object&quot;);</b>
+&nbsp;    }
+&nbsp;    @Test
+&nbsp;    @Order(4)
+&nbsp;    void testTrueFalse() {
+<b class="fc">&nbsp;        int gradeOne =10 ;</b>
+<b class="fc">&nbsp;        int gradeTwo = 5 ;</b>
+<b class="fc">&nbsp;        assertTrue(demoUtils.isGreater(gradeOne,gradeTwo) , &quot;This should return true&quot;);</b>
+<b class="fc">&nbsp;        assertFalse(demoUtils.isGreater(gradeTwo,gradeOne) ,&quot;This should return false   &quot;);</b>
+&nbsp;    }
+&nbsp;    @Test
+&nbsp;    @Order(5)
+&nbsp;    void testArrayEquals() {
+<b class="fc">&nbsp;        String [] stringArray= {&quot;A&quot; , &quot;B&quot; , &quot;C&quot;};</b>
+&nbsp;
+<b class="fc">&nbsp;        assertArrayEquals(stringArray , demoUtils.getFirstThreeLettersOfAlphabet() , &quot;Arrays Should be the same&quot;);</b>
+&nbsp;    }
+&nbsp;    @Test
+&nbsp;    @Order(6)
+&nbsp;    void testIterableEquals () {
+<b class="fc">&nbsp;        List&lt;String&gt; theList = List.of(&quot;luv&quot; , &quot;2&quot; , &quot;code&quot;);</b>
+<b class="fc">&nbsp;        assertIterableEquals(theList , demoUtils.getAcademyInList() , &quot;Expected List should be same as actual list&quot;);</b>
+&nbsp;    }
+&nbsp;    @Test
+&nbsp;    @Order(7)
+&nbsp;    void testLinesMatch() {
+<b class="fc">&nbsp;        List&lt;String&gt; theList = List.of(&quot;luv&quot; , &quot;2&quot; , &quot;code&quot;);</b>
+<b class="fc">&nbsp;        assertLinesMatch(theList , demoUtils.getAcademyInList() , &quot;Lines Should Match&quot;);</b>
+&nbsp;    }
+&nbsp;    @Test
+&nbsp;    @Order(8)
+&nbsp;    void testThrowsAndDoesNotThrows() {
+<b class="fc">&nbsp;        assertThrows(Exception.class , ()-&gt; {demoUtils.throwException(-1);} , &quot;should throw exception&quot; );</b>
+<b class="fc">&nbsp;        assertDoesNotThrow(()-&gt;{demoUtils.throwException(5);} , &quot;Should not throw exception&quot;);</b>
+&nbsp;    }
+&nbsp;    @Test
+&nbsp;    @Order(9)
+&nbsp;    void testTimeOut() {
+<b class="fc">&nbsp;        assertTimeoutPreemptively(Duration.ofSeconds(3) , ()-&gt;{demoUtils.checkTimeout();} , &quot;Method should execute in 3 seconds&quot;);</b>
+&nbsp;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-05-12 21:11</div>
+</div>
+</body>
+</html>

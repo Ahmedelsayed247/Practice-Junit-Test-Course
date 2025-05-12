@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="DemoUtilsTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="1.00-starting-project" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="junitdemp.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="junitdemp" />
+    <option name="MAIN_CLASS_NAME" value="junitdemp.DemoUtilsTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
