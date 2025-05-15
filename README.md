@@ -42,5 +42,6 @@ Each section corresponds to a topic or module from the course. The repository is
 - This project is for educational purposes to reinforce best practices in writing clean, maintainable, and efficient unit and integration tests in modern Spring Boot 3 applications.
 
 ## 📌 Credits
-- Original Course: Develop Real-Time Spring Boot 3 Unit Tests
+- Original Course: [*Develop Real-Time Spring Boot 3 Unit Tests**](https://www.udemy.com/course/develop-real-time-spring-boot-unit-tests/)
+
 - Instructors: [Chad Darby , Eric Roby]
