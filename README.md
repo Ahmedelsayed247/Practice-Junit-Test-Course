@@ -1,6 +1,6 @@
 # 📘 Spring Boot 3 Unit Testing Practice
 
-This repository contains my hands-on practice and code samples from the [Udemy course]([https://www.udemy.com/course/develop-real-time-spring-boot-unit-tests/](https://www.udemy.com/share/106mLe3@8yLTrr4qC4ZjRQoWi3UoihjBdEndM-f8Ue1yvNGt7Muwdj5v_Q9Sau7UOHgwdCc8Uw==/)) **"Develop Real-Time Spring Boot 3 Unit Tests"**. The course covers essential testing tools and practices including JUnit 5, Mockito, MockMvc, TDD, JsonPath, Hamcrest, H2 Embedded Database, and MySQL.
+This repository contains my hands-on practice and code samples from the [Udemy course]((https://www.udemy.com/share/106mLe3@8yLTrr4qC4ZjRQoWi3UoihjBdEndM-f8Ue1yvNGt7Muwdj5v_Q9Sau7UOHgwdCc8Uw==/)) **"Develop Real-Time Spring Boot 3 Unit Tests"**. The course covers essential testing tools and practices including JUnit 5, Mockito, MockMvc, TDD, JsonPath, Hamcrest, H2 Embedded Database, and MySQL.
 
 ---
 
